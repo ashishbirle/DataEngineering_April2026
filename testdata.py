@@ -11,3 +11,7 @@ df.createOrReplaceTempView("vehicle_sales")
 
 df1 = spark.sql("select * from vehicle_sales limit 10")
 print(df1.show())
+
+
+df2 = spark.sql("select * from vehicle_sales where Year=2012 limit 10")
+print(df2.show())
